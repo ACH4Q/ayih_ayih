@@ -1,0 +1,21 @@
+----------------8<-------------[ START TEST 
+        💻 TEST
+./a.out "three words apart"         🔎 YOUR OUTPUT:
+../../rendu/ft_split/ft_split.c:3:7: warning: conflicting types for built-in function ‘strncpy’; expected ‘char *(char *, const char *, long unsigned int)’ [-Wbuiltin-declaration-mismatch]
+    3 | char *strncpy(char *s1, char *s2,int n)
+      |       ^~~~~~~
+../../rendu/ft_split/ft_split.c:2:1: note: ‘strncpy’ is declared in header ‘<string.h>’
+    1 | #include <stdlib.h>
+  +++ |+#include <string.h>
+    2 | 
+../../rendu/ft_split/ft_split.c: In function ‘ft_split’:
+../../rendu/ft_split/ft_split.c:43:9: warning: implicit declaration of function ‘ft_strncpy’; did you mean ‘strncpy’? [-Wimplicit-function-declaration]
+   43 |         ft_strncpy(str1[x++],&str[j],i - j);
+      |         ^~~~~~~~~~
+      |         strncpy
+/usr/bin/ld: /tmp/ccpmgjk5.o: in function `ft_split':
+ft_split.c:(.text+0x2a8): undefined reference to `ft_strncpy'
+collect2: error: ld returned 1 exit status
+
+        ❌ COMPILATION ERROR
+----------------8<------------- END TEST ]
